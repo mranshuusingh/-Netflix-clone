@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">NETFLIX</div>
+        <button class="sign-in">Sign In</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-box">
+                <input type="email" placeholder="Email address">
+                <button class="cta">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Now -->
+    <section class="movies">
+        <h2>Trending Now</h2>
+        <div class="movie-container">
+            <button class="scroll-btn left" onclick="scrollLeft('trending')">&#10094;</button>
+            <div class="movie-row" id="trending">
+                <img src="https://image.tmdb.org/t/p/w500/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg" alt="Dune">
+                <img src="https://image.tmdb.org/t/p/w500/pTxw4GFE3ZfzJfvuUsPyD5njAuI.jpg" alt="Spider-Man: No Way Home">
+                <img src="https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Joker">
+                <img src="https://image.tmdb.org/t/p/w500/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg" alt="The Shawshank Redemption">
+                <img src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg" alt="Interstellar">
+                <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight">
+            </div>
+            <button class="scroll-btn right" onclick="scrollRight('trending')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Popular Movies -->
+    <section class="movies">
+        <h2>Popular Movies</h2>
+        <div class="movie-container">
+            <button class="scroll-btn left" onclick="scrollLeft('popular')">&#10094;</button>
+            <div class="movie-row" id="popular">
+                <img src="https://image.tmdb.org/t/p/w500/wPU78OPN4BYEgWYdXyg0phMee64.jpg" alt="Pulp Fiction">
+                <img src="https://image.tmdb.org/t/p/w500/o0lO84GI7qrG6XFvtsPOSV7CTNa.jpg" alt="Inception">
+                <img src="https://image.tmdb.org/t/p/w500/xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg" alt="The Conjuring">
+                <img src="https://image.tmdb.org/t/p/w500/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg" alt="It">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/78e3b466891157.5b26a37ceebf0.jpg" alt="The Nun">
+                <img src="https://m.media-amazon.com/images/M/MV5BNjkyMDU5ZWQtZDhkOC00ZWFjLWIyM2MtZWFhMDUzNjdlNzU2XkEyXkFqcGc@._V1_.jpg" alt="Annabelle">
+            </div>
+            <button class="scroll-btn right" onclick="scrollRight('popular')">&#10095;</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
