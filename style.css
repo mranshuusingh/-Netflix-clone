@@ -11,7 +11,8 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    align-items: center;
+    padding: 15px 40px;
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
@@ -20,7 +21,7 @@ body {
 }
 
 .logo {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     color: red;
 }
@@ -29,9 +30,9 @@ body {
     background-color: red;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
     font-weight: bold;
 }
@@ -45,15 +46,26 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: auto;
 }
 
 /* Movie Sections */
 .movies {
-    margin: 50px;
+    margin: 40px;
 }
 
 .movies h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -65,14 +77,15 @@ body {
     align-items: center;
 }
 
+/* Scroll Buttons */
 .scroll-btn {
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
-    font-size: 30px;
+    font-size: 26px;
     cursor: pointer;
-    width: 50px;
+    width: 45px;
     height: 100%;
     z-index: 10;
 }
@@ -89,11 +102,24 @@ body {
 .movie-row {
     display: flex;
     gap: 10px;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 10px;
-    width: 100%;
     white-space: nowrap;
+}
+
+.movie-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
 }
 
 .movie-row img {
@@ -104,4 +130,100 @@ body {
 
 .movie-row img:hover {
     transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    
+    .logo {
+        font-size: 26px;
+    }
+
+    .sign-in {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .movie-row img {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .sign-in {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .movie-row img {
+        width: 140px;
+    }
+
+    .scroll-btn {
+        font-size: 20px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .sign-in {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .movie-row img {
+        width: 120px;
+    }
+
+    .scroll-btn {
+        font-size: 18px;
+        width: 35px;
+    }
 }
